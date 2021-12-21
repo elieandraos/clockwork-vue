@@ -1,0 +1,15 @@
+# dev
+.env
+
+# OSX
+.DS_Store
+
+# IDE
+.idea
+.vscode
+
+# npm
+node_modules/
+
+# jest
+coverage
