@@ -1,6 +1,6 @@
 {
     "name": "@elieandraos/clockwork-vue",
-    "version": "0.0.1",
+    "version": "0.0.0",
     "source": "src/index.js",
     "main": "dist/index.js",
     "scripts": {
