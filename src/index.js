@@ -1,6 +1,6 @@
 import { computed, ref } from 'vue'
 
-const useClockwork = () => {
+export const useClockwork = () => {
     const $errors = ref([])
 
     const getErrors = computed(() => (key) => {
@@ -22,8 +22,4 @@ const useClockwork = () => {
         hasErrors,
         getFirstError,
     }
-}
-
-export {
-    useClockwork
 }
