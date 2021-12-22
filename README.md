@@ -5,7 +5,7 @@ This package ships a Vue composable that offers handy methods to access the
 // Vue component
 <script setup>
     import Clockwork from '@elieandraos/clockwork'
-    import { useClockwork } from '@elieandraos/clockwork-vue'
+    import useClockwork from '@elieandraos/clockwork-vue'
     
     const validator = new Clockwork()
     const { $errors, hasErrors, getFirstError } = useClockwork()
