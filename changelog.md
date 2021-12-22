@@ -1,4 +1,9 @@
 # Changelog
+## v0.0.3
+### Added
+- :construction_worker: gitHub build action
+- :hammer: set microbundle build details
+
 ## v0.0.2
 ### Added
 - :green_heart: build with microbundle
