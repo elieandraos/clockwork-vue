@@ -1,16 +1,28 @@
 {
     "name": "@elieandraos/clockwork-vue",
+    "description": "A Vue composable that offers methods to access the validation error bag in the template",
     "version": "0.0.1",
     "source": "src/index.js",
     "main": "dist/index.js",
+    "module": "dist/index.module.js",
+    "umd:main": "dist/index.umd.js",
+    "unpkg": "dist/index.modern.js",
     "scripts": {
         "info": "npm list -depth 0 && npm list -g --depth=0 && npm outdated || exit 0",
-        "build": "rm -rf dist && node scripts/build.js",
+        "build": "rm -rf dist && microbundle",
         "test": "jest --verbose --coverage",
         "lint": "npx eslint src --fix",
         "format": "npx prettier --write .",
         "release": "node -r esm scripts/release.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/elieandraos/clockwork-vue.git"
+    },
+    "bugs": {
+        "url": "https://github.com/elieandraos/clockwork-vue/issues"
+    },
+    "homepage": "https://github.com/elieandraos/clockwork-vue#readme",
     "license": "ISC",
     "dependencies": {
         "@elieandraos/clockwork": "^1.0.7",
@@ -19,11 +31,10 @@
     "devDependencies": {
         "@elieandraos/cli-tools": "^0.0.7",
         "chalk": "^4.1.2",
-        "esbuild": "^0.14.5",
-        "esbuild-node-externals": "^1.4.1",
         "eslint": "^8.0.1",
         "esm": "^3.2.25",
         "jest": "^27.2.5",
+        "microbundle": "^0.14.2",
         "prettier": "^2.5.1"
     }
 }
