@@ -24,6 +24,6 @@ const useClockwork = () => {
     }
 }
 
-export default {
-    useClockwork,
+export {
+    useClockwork
 }
