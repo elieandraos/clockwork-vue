@@ -1,4 +1,8 @@
 # Changelog
+## v0.0.5
+### Changed
+- :bug: remove default from export
+
 ## v0.0.4
 ### Added
 - :package: `@babel/preset-env`
