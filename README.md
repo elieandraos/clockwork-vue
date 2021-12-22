@@ -1,6 +1,7 @@
-A Vue composable that offers methods to access the clockwork validation error bag in the template
+This package ships a Vue composable that offers handy methods to access the
+[clockwork](https://github.com/elieandraos/clockwork-vue/) error bag inside the component template.
 
-```javascript
+```vue
 <script setup>
     import Clockwork from '@elieandraos/clockwork'
     import { useClockwork } from '@elieandraos/clockwork-vue'
@@ -20,16 +21,22 @@ A Vue composable that offers methods to access the clockwork validation error ba
             })
     
         if ( validator.passes() ) {
-            // ... do something when input data are valid
+            // ...
         }
-            else {
+        else {
             // fill the $errors provided by the composable in order to access it in the template
             $errors.value = getError
         }
     }
     
-    return {
-        validate
-    }
+    return { validate, hasErrors, getFirstError }
 </script>
 ```
+
+```html
+<input type="text" v-model="name" />
+<div v-if="hasErrors('name')">
+    {{ getFirstError('name') }}
+</div>
+```
+
