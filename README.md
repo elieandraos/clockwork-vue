@@ -31,4 +31,5 @@ A Vue composable that offers methods to access the clockwork validation error ba
     return {
         validate
     }
+</script>
 ```
