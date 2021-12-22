@@ -1,4 +1,8 @@
 # Changelog
+## v0.0.6
+### Changed
+- :alembic: export
+
 ## v0.0.5
 ### Changed
 - :bug: remove default from export
