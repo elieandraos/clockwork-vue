@@ -1,6 +1,12 @@
 # Changelog
 ## v0.0.3
 ### Added
+- :package: `@babel/preset-env`
+### Changed
+- :hammer: update build targets
+
+## v0.0.3
+### Added
 - :construction_worker: gitHub build action
 - :hammer: set microbundle build details
 
