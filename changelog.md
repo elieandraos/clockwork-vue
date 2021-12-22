@@ -1,4 +1,11 @@
 # Changelog
+## v0.0.2
+### Added
+- :green_heart: build with microbundle
+- :bulb: documentation update
+
+### Removed
+- :fire: remove build script
 
 ## v0.0.1
 ### Added
