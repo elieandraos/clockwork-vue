@@ -2,8 +2,9 @@ This package ships a Vue composable that offers handy methods to access the
 [clockwork](https://github.com/elieandraos/clockwork-vue/) error bag inside the component template.
 
 ```vue
+<script setup>
 import Clockwork from '@elieandraos/clockwork'
-import Clockwork from '@elieandraos/clockwork'
+import { useClockwork } from '@elieandraos/clockwork-vue'
 
 const { $errors, hasErrors, getFirstError, getErrors } = useClockwork()
 
@@ -16,6 +17,7 @@ if(validator.fails())
 
 // expose to component template
 return { hasErrors, getFirstError, getErrors }
+</script>
 ```
 
 > Below is a full working example:
