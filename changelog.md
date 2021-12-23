@@ -1,4 +1,11 @@
 # Changelog
+## v0.0.8
+### Changed
+- :building_construction: improve computed methods
+- :bulb: update documentation
+### Added
+- :test_tube: composable unit tests
+
 ## v0.0.7
 ### Changed
 - :alembic: export
