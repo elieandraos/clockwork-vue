@@ -1,4 +1,8 @@
 # Changelog
+## v0.0.9
+### Changed
+- :package: bump `@elieandraos/clockwork` to lastest
+
 ## v0.0.8
 ### Changed
 - :building_construction: improve computed methods
