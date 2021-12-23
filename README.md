@@ -20,7 +20,7 @@ return { hasErrors, getFirstError, getErrors }
 </script>
 ```
 
-> Below is a full working example:
+# Full example:
 
 ```vue
 // Vue component
