@@ -3,23 +3,26 @@ import { computed, ref } from 'vue'
 export const useClockwork = () => {
     const $errors = ref([])
 
-    const getErrors = computed(() => (key) => {
-        return $errors.value
-            .filter(({ dataKey }) => dataKey === key)
-            .map(({ message }) => message)
+    const getErrors = computed(() => (key = null) => {
+        return key
+            ? $errors.value
+                  .filter(({ dataKey }) => dataKey === key)
+                  .map(({ message }) => message)
+            : $errors.value.map(({ message }) => message)
     })
 
-    const hasErrors = computed(() => (key) => {
+    const hasErrors = computed(() => (key = null) => {
         return !!getErrors.value(key).length
     })
 
-    const getFirstError = (dataKey) => {
-        return hasErrors.value(dataKey) ? getErrors.value(dataKey)[0] : null
+    const getFirstError = (key = null) => {
+        return hasErrors.value(key) ? getErrors.value(key)[0] : null
     }
 
     return {
         $errors,
         hasErrors,
+        getErrors,
         getFirstError,
     }
 }
