@@ -1,3 +1,12 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/elieandraos/clockwork-vue/CI%20build%20&%20tests)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@elieandraos/clockwork-vue)
+[![Coverage Status](https://coveralls.io/repos/github/elieandraos/clockwork-vue/badge.svg?branch=master)](https://coveralls.io/github/elieandraos/clockwork-vue?branch=main)
+[![CodeFactor](https://www.codefactor.io/repository/github/elieandraos/clockwork-vue/badge)](https://www.codefactor.io/repository/github/elieandraos/clockwork-vue)
+![npms.io (quality)](https://img.shields.io/npms-io/quality-score/@elieandraos/clockwork-vue)
+![downloads](https://img.shields.io/npm/dt/@elieandraos/clockwork-vue)
+![NPM](https://img.shields.io/npm/l/@elieandraos/clockwork-vue)
+
+
 This package ships a Vue composable that offers handy methods to access the
 [clockwork](https://github.com/elieandraos/clockwork-vue/) error bag inside the component template.
 
