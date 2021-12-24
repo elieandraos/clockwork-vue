@@ -1,7 +1,7 @@
 {
     "name": "@elieandraos/clockwork-vue",
     "description": "A Vue composable that offers methods to access the validation error bag in the template",
-    "version": "0.0.9",
+    "version": "1.0.0",
     "source": "src/index.js",
     "main": "dist/index.js",
     "module": "dist/index.module.js",
