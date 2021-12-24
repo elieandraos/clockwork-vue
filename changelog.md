@@ -1,7 +1,12 @@
 # Changelog
+## v1.0.0
+### Changed
+- :globe_with_meridians: report test coverage to coveralls
+- :bulb: documentation badges
+
 ## v0.0.9
 ### Changed
-- :package: bump `@elieandraos/clockwork` to lastest
+- :package: bump `@elieandraos/clockwork` to latest
 
 ## v0.0.8
 ### Changed
