@@ -5,9 +5,9 @@
 ![downloads](https://img.shields.io/npm/dt/@elieandraos/clockwork-vue)
 ![NPM](https://img.shields.io/npm/l/@elieandraos/clockwork-vue)
 
-This package is a Vue 3 adapter for the [clockwork validation library](https://github.com/elieandraos/clockwork)
+This package is a Vue 3 adapter for the [clockwork validation library](https://github.com/elieandraos/clockwork).
 It ships 2 objects: 
-- `Clockwork`: the native library that handles all the validation flow
+- `Clockwork`: the native library that handles all the validation in the component script
 - `useClockwork()`: a Vue composable that exposes the validation errors to the component template.
 
 # Installation
