@@ -5,62 +5,92 @@
 ![downloads](https://img.shields.io/npm/dt/@elieandraos/clockwork-vue)
 ![NPM](https://img.shields.io/npm/l/@elieandraos/clockwork-vue)
 
+This package ships a Vue 3 composable that exposes the clockwork error bag to the component template.
+All the validation is still handled by the clockwork library, so make sure to check 
+![**the full documentation**](https://github.com/elieandraos/clockwork) to benefit from all its 
+features (built-in rules, custom rules, etc...)
 
-This package ships a Vue composable that offers handy methods to access the
-[clockwork](https://github.com/elieandraos/clockwork-vue/) error bag inside the component template.
+# Installation
+```shell
+npm install @elieandraos/clockwork --save
+```
+
+# Usage
+The composable adds a reactive variable `$errors` to the component state. 
+It should be filled with the clockwork error bag when the validation fails.
+
+It also exposes 3 methods to the component template
+- `getError(key=null)`
+- `getFirstError(key=null)`
+- `hasErrors(key=null)`
 
 ```vue
 <script setup>
-import Clockwork from '@elieandraos/clockwork'
-import { useClockwork } from '@elieandraos/clockwork-vue'
+    import { useClockwork } from '@elieandraos/clockwork-vue'
+    const { $errors, hasErrors, getFirstError, getErrors } = useClockwork()
 
-const { $errors, hasErrors, getFirstError, getErrors } = useClockwork()
-
-// ...
-
-if(validator.fails())
-    $errors.value = validator.getErrorBag()
-
-// ...
-
-// expose to component template
-return { hasErrors, getFirstError, getErrors }
+    //...
+    
+    if( validator.fails())
+        $errors.value = validator.getErrorBag()
+    
+    // ...
+    
+    return {
+       getErrors,
+       getFirstError,
+       hasErrors
+    }
 </script>
 ```
 
-# Full example:
-
+# Full example with the clockwork library
 ```vue
-// Vue component
 <script setup>
+import { reactive, toRaw, toRefs } from 'vue'
 import Clockwork from '@elieandraos/clockwork'
 import { useClockwork } from '@elieandraos/clockwork-vue'
 
 const validator = new Clockwork()
 const { $errors, hasErrors, getFirstError, getErrors } = useClockwork()
 
+const state = reactive({
+    name: null,
+    email: null,
+})
+
 const validate = () => {
     validator
-        .setData({
-            name: '',
-            email: '',
-        })
+        .setData( toRaw(state) )
         .setRules({
             name: 'required',
-            email: 'required',
+            email: 'required | email',
         })
 
     if (validator.passes()) {
         // ...
     } else {
-        // fill the $errors provided by the composable in order to access it in the template
-        $errors.value = getError
+        // fill the $errors with the error bag
+        $errors.value = validator.getErrorBag()
     }
+}
+
+return {
+    ...toRefs(state),
+    hasErrors,
+    getFirstError,
+    validate
 }
 </script>
 
 <template>
     <input type="text" v-model="name" />
     <div v-if="hasErrors('name')">{{ getFirstError('name') }}</div>
+
+    <input type="text" v-model="email" />
+    <div v-if="hasErrors('email')">{{ getFirstError('email') }}</div>
+    
+    <button @click="validate">submit</button>
+    
 </template>
 ```
