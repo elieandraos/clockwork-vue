@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.3
+### Removed
+- :fire: remove clockwork library export
+
 ## v1.0.2
 ### Changed
 - :building_construction: export the clockwork library
