@@ -1,4 +1,9 @@
 # Changelog
+## v1.0.2
+### Changed
+- :building_construction: export the clockwork library
+- :bulb: update documentation
+
 ## v1.0.1
 ### Changed
 - :bookmark: always install the latest versions of `@elieandraos/cli-tools` and `@elieandraos/clockwork`
