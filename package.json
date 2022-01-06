@@ -29,12 +29,12 @@
     "homepage": "https://github.com/elieandraos/clockwork-vue#readme",
     "license": "ISC",
     "dependencies": {
-        "@elieandraos/clockwork": "^1.0.15",
+        "@elieandraos/clockwork": "*",
         "vue": "^3.2.26"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.16.5",
-        "@elieandraos/cli-tools": "^0.0.7",
+        "@elieandraos/cli-tools": "*",
         "chalk": "^4.1.2",
         "eslint": "^8.0.1",
         "esm": "^3.2.25",
