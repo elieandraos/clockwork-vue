@@ -7,7 +7,7 @@
 
 This package is a Vue 3 adapter for the [clockwork validation library](https://github.com/elieandraos/clockwork)
 It ships 2 objects: 
-- `Clockwork`: the native [library](https://github.com/elieandraos/clockwork) that handles all the validation flow (built-in rules, custom rules, custom error messages etc...)
+- `Clockwork`: the native library that handles all the validation flow
 - `useClockwork()`: a Vue composable that exposes the validation errors to the component template.
 
 # Installation
@@ -25,6 +25,11 @@ const { $errors, hasErrors, getFirstError, getErrors } = useClockwork() // vue c
 </script>
 ```
 
+### Library
+For more details about the library usage (built-in rules, custom rules, custom error messages etc...) 
+[see the full documentation here](https://github.com/elieandraos/clockwork#readme). 
+
+### Vue composable
 The composable adds a reactive data property `$errors` to the component state. 
 **It should be filled with the clockwork error bag when the validation fails**.
 
