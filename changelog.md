@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.1
+### Changed
+- :bookmark: always install the latest versions of `@elieandraos/cli-tools` and `@elieandraos/clockwork`
+
 ## v1.0.0
 ### Changed
 - :globe_with_meridians: report test coverage to coveralls
