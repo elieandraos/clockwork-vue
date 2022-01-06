@@ -1,7 +1,4 @@
 import { computed, ref } from 'vue'
-import { default as library } from "@elieandraos/clockwork"
-
-export const Clockwork = library
 
 export const useClockwork = () => {
     const $errors = ref([])
