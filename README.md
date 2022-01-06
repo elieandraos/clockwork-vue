@@ -7,7 +7,7 @@
 
 This package ships a Vue 3 composable that exposes the clockwork error bag to the component template.
 All the validation is still handled by the clockwork library, so make sure to check 
-![**the full documentation**](https://github.com/elieandraos/clockwork) to benefit from all its 
+[the full documentation](https://github.com/elieandraos/clockwork) to benefit from all its 
 features (built-in rules, custom rules, etc...)
 
 # Installation
@@ -20,9 +20,9 @@ The composable adds a reactive variable `$errors` to the component state.
 It should be filled with the clockwork error bag when the validation fails.
 
 It also exposes 3 methods to the component template
-- `getError(key=null)`
-- `getFirstError(key=null)`
-- `hasErrors(key=null)`
+- `getErrors(key=null)` return all the error messages or all the error messages of `key` if specified
+- `getFirstError(key=null)` return the first error message found or the first error message of `key` if specified
+- `hasErrors(key=null)` _checks if there is any validation error or any validation error for the `key` if specified_
 
 ```vue
 <script setup>
