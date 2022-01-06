@@ -5,32 +5,18 @@
 ![downloads](https://img.shields.io/npm/dt/@elieandraos/clockwork-vue)
 ![NPM](https://img.shields.io/npm/l/@elieandraos/clockwork-vue)
 
-This package is a Vue 3 adapter for the [clockwork validation library](https://github.com/elieandraos/clockwork).
-It ships 2 objects: 
-- `Clockwork`: the native library that handles all the validation in the component script
-- `useClockwork()`: a Vue composable that exposes the validation errors to the component template.
+This package ships a Vue 3 composable that exposes the clockwork error bag to the component template.
+All the validation is still handled by the clockwork library, so make sure to check
+[the full documentation](https://github.com/elieandraos/clockwork) to benefit from all its
+features (built-in rules, custom rules, etc...)
 
 # Installation
 ```shell
-npm install @elieandraos/clockwork-vue --save
+npm install @elieandraos/clockwork @elieandraos/clockwork-vue --save
 ```
 
 # Usage
-```vue
-<script setup>
-import { Clockwork, useClockwork } from '@elieandraos/clockwork-vue'
-
-const validator = new Clockwork() // library
-const { $errors, hasErrors, getFirstError, getErrors } = useClockwork() // vue composable
-</script>
-```
-
-### Library
-For more details about the library usage (built-in rules, custom rules, custom error messages etc...) 
-[see the full documentation here](https://github.com/elieandraos/clockwork#readme). 
-
-### Vue composable
-The composable adds a reactive data property `$errors` to the component state. 
+The composable adds a reactive variable `$errors` to the component state.
 **It should be filled with the clockwork error bag when the validation fails**.
 
 It also exposes 3 methods to the component template
@@ -40,12 +26,13 @@ It also exposes 3 methods to the component template
 
 ```vue
 <script setup>
-    import { Clockwork, useClockwork } from '@elieandraos/clockwork-vue'
+    import Clockwork from '@elieandraos/clockwork'
+    import { useClockwork } from '@elieandraos/clockwork-vue'
     
     const validator = new Clockwork()
     const { $errors, hasErrors, getFirstError, getErrors } = useClockwork()
-
-    //...
+    
+    // ...
     
     if( validator.fails())
         $errors.value = validator.getErrorBag()
@@ -64,7 +51,8 @@ It also exposes 3 methods to the component template
 ```vue
 <script setup>
 import { reactive, toRaw, toRefs } from 'vue'
-import { Clockwork, useClockwork } from '@elieandraos/clockwork-vue'
+import Clockwork from '@elieandraos/clockwork'
+import { useClockwork } from '@elieandraos/clockwork-vue'
 
 const validator = new Clockwork()
 const { $errors, hasErrors, getFirstError, getErrors } = useClockwork()
