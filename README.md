@@ -7,12 +7,12 @@
 
 This package ships a Vue 3 composable that exposes the clockwork error bag to the component template.
 All the validation is still handled by the clockwork library, so make sure to check
-<a href="https://github.com/elieandraos/clockwork" target="_blank">the full documentation</a> to benefit from all its 
+[the full documentation](https://github.com/elieandraos/clockwork) to benefit from all its 
 features (built-in rules, custom rules, etc...)
 
 # Installation
 ```shell
-npm install @elieandraos/clockwork --save
+npm install @elieandraos/clockwork-vue --save
 ```
 
 # Usage
