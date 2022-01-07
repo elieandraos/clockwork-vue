@@ -36,14 +36,7 @@ It also exposes 3 methods to the component template
     
     if( validator.fails())
         $errors.value = validator.getErrorBag()
-    
-    // ...
-    
-    return {
-       getErrors,
-       getFirstError,
-       hasErrors
-    }
+
 </script>
 ```
 
@@ -76,13 +69,6 @@ const validate = () => {
         // fill the $errors with the error bag
         $errors.value = validator.getErrorBag()
     }
-}
-
-return {
-    ...toRefs(state),
-    hasErrors,
-    getFirstError,
-    validate
 }
 </script>
 
