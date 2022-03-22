@@ -1,4 +1,10 @@
 # Changelog
+## v1.0.4
+### Removed
+- :fire: remove microbundle
+### Changed
+- :green_heart: bundle with esbuild
+
 ## v1.0.3
 ### Removed
 - :fire: remove clockwork library export
