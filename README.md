@@ -1,4 +1,3 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/elieandraos/clockwork-vue/CI)
 [![Coverage Status](https://coveralls.io/repos/github/elieandraos/clockwork-vue/badge.svg?branch=main)](https://coveralls.io/github/elieandraos/clockwork-vue?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/elieandraos/clockwork-vue/badge)](https://www.codefactor.io/repository/github/elieandraos/clockwork-vue)
 ![npms.io (quality)](https://img.shields.io/npms-io/quality-score/@elieandraos/clockwork-vue)
